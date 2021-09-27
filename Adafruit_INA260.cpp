@@ -49,8 +49,8 @@ Adafruit_INA260::Adafruit_INA260(void) {}
  *            The Wire object to be used for I2C connections.
  *    @return True if initialization was successful, otherwise false.
  */
-bool Adafruit_INA260::begin(uint8_t i2c_address, TwoWire *theWire) {
-  i2c_dev = new Adafruit_I2CDevice(i2c_address, theWire);
+bool Adafruit_INA260::begin(uint8_t i2c_address, TwoWire *theWire, bool compatible_3v) {
+  i2c_dev = new Adafruit_I2CDevice(i2c_address, theWire, compatible_3v);
 
   if (!i2c_dev->begin()) {
     return false;

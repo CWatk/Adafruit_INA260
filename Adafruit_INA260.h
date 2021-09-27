@@ -127,7 +127,7 @@ class Adafruit_INA260 {
 public:
   Adafruit_INA260();
   bool begin(uint8_t i2c_addr = INA260_I2CADDR_DEFAULT,
-             TwoWire *theWire = &Wire);
+             TwoWire *theWire = &Wire, bool compatible_3v = false);
   void reset(void);
   float readCurrent(void);
   float readBusVoltage(void);
